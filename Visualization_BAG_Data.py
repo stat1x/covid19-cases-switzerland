@@ -58,7 +58,7 @@ while True:
     except ValueError:  # if the user input is not an integer number
         continue
     if postestedindividuals > inhabitantsCH:
-        print('Number is higher than all {} inhabitants:'.format(canton))
+        print('Number is higher than all CH inhabitants:')
         print(str(postestedindividuals) + ' COVID19 tested individuals in {} \n'.format(canton))
     else:
         print(str(postestedindividuals)+' COVID19 tested individuals in {} \n'.format(canton))

@@ -17,7 +17,7 @@ def scatterplot(datesincezero, poscasearray):
     plt.ylabel('# of positive tests (BAG)')
 
 
-data = pd.read_csv("https://raw.githubusercontent.com/daenuprobst/covid19-cases-switzerland/master/covid19_cases_switzerland.csv", sep=';')
+data = pd.read_csv("https://raw.githubusercontent.com/daenuprobst/covid19-cases-switzerland/master/covid19_cases_switzerland.csv")
 canton = input('Which canton do you want to check? (inputformat: ZH, LU, BE, CH,...) \n')
 data = data.filter(items=['Date', canton])  # only keep data for one canton (or whole CH) in dataframe
 data.rename(columns={canton: "TotalPosTests1"}, inplace=True)

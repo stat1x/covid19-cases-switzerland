@@ -34,7 +34,7 @@ def main():
                 True,
             )
 
-    df_formatted.to_csv("covid_19_cases_switzerland_standard_format.csv")
+    df_formatted.to_csv("covid_19_cases_switzerland_standard_format.csv", index=False)
 
 
 if __name__ == "__main__":

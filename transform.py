@@ -5,6 +5,7 @@ from datetime import date, datetime
 def main():
     """ Transforms the data from my csv to the standards csv """
     df = pd.read_csv("covid19_cases_switzerland.csv")
+    df_fatalities = pd.read_csv("covid19_fatalities_switzerland.csv")
     df_template = pd.read_csv("template.csv")
     df_formatted = df_template[0:0]
     cantons = df_template["abbreviation_canton"].unique()
@@ -30,6 +31,7 @@ def main():
                     "long": df_template.loc[canton]["long"],
                     "total_currently_positive_cases": row[canton],
                     "new_positive_cases": new_positive_cases,
+                    "deaths": df_fatalities.iloc[i][canton],
                 },
                 True,
             )

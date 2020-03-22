@@ -438,6 +438,6 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-22T00:00:00,Switzerland,TI,Ticino,46.009279,8.955575999999999,,,,,939.0,21.0,,37.0,,
 2020-03-22T00:00:00,Switzerland,UR,Uri,46.880421999999996,8.644409,,,,,,,,,,
 2020-03-22T00:00:00,Switzerland,VD,Vaud,46.5369,6.58478,,,,,,,,15.0,,
-2020-03-22T00:00:00,Switzerland,VS,Valais,46.209567,7.604659,,,,,432.0,73.0,,9.0,,
+2020-03-22T00:00:00,Switzerland,VS,Valais,46.209567,7.604659,,,,,432.0,73.0,,10.0,,
 2020-03-22T00:00:00,Switzerland,ZG,Zug,47.157296,8.537294000000001,,,,,,,,,,
 2020-03-22T00:00:00,Switzerland,ZH,Zürich,47.451541999999996,8.564572,,,,,891.0,,,3.0,,

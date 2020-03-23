@@ -453,7 +453,7 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-23T00:00:00,Switzerland,GR,Graubünden,46.796756,10.305946,,,,,266.0,9.0,,6.0,,
 2020-03-23T00:00:00,Switzerland,JU,Jura,47.350744,7.156107,,,,,,,,,,
 2020-03-23T00:00:00,Switzerland,LU,Luzern,47.083333,8.266667,,,,,156.0,25.0,,,,
-2020-03-23T00:00:00,Switzerland,NE,Neuchatel,46.995534,6.780125999999999,,,,,,,,2.0,,
+2020-03-23T00:00:00,Switzerland,NE,Neuchatel,46.995534,6.780125999999999,,,,,204.0,16.0,,2.0,,
 2020-03-23T00:00:00,Switzerland,NW,Nidwalden,46.95805,8.36609,,,,,,,,,,
 2020-03-23T00:00:00,Switzerland,OW,Obwalden,46.898509000000004,8.250681,,,,,21.0,1.0,,,,
 2020-03-23T00:00:00,Switzerland,SG,St.Gallen,47.43162,9.39845,,,,,185.0,22.0,,,,

@@ -441,7 +441,7 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-22T00:00:00,Switzerland,VS,Valais,46.209567,7.604659,,,,,432.0,73.0,,10.0,,
 2020-03-22T00:00:00,Switzerland,ZG,Zug,47.157296,8.537294000000001,,,,,,,,,,
 2020-03-22T00:00:00,Switzerland,ZH,Zürich,47.451541999999996,8.564572,,,,,891.0,,,3.0,,
-2020-03-23T00:00:00,Switzerland,AG,Aargau,47.449406,8.327494999999999,,,,,234.0,2.0,,1.0,,
+2020-03-23T00:00:00,Switzerland,AG,Aargau,47.449406,8.327494999999999,,,,,241.0,9.0,,1.0,,
 2020-03-23T00:00:00,Switzerland,AI,Appenzell Innerrhoden,47.328414,9.409647,,,,,4.0,1.0,,,,
 2020-03-23T00:00:00,Switzerland,AR,Appenzell Ausserrhoden,47.382709999999996,9.27186,,,,,27.0,1.0,,1.0,,
 2020-03-23T00:00:00,Switzerland,BE,Bern,46.916667,7.466667,,,,,470.0,,,5.0,,

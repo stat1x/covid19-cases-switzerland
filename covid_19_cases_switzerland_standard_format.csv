@@ -482,7 +482,7 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-24T00:00:00,Switzerland,NE,Neuchatel,46.995534,6.780125999999999,,,,,,,,2.0,,
 2020-03-24T00:00:00,Switzerland,NW,Nidwalden,46.95805,8.36609,,,,,,,,,,
 2020-03-24T00:00:00,Switzerland,OW,Obwalden,46.898509000000004,8.250681,,,,,,,,,,
-2020-03-24T00:00:00,Switzerland,SG,St.Gallen,47.43162,9.39845,,,,,,,,,,
+2020-03-24T00:00:00,Switzerland,SG,St.Gallen,47.43162,9.39845,,,,,,,,1.0,,
 2020-03-24T00:00:00,Switzerland,SH,Schaffhausen,47.713570000000004,8.59167,,,,,32.0,2.0,,,,
 2020-03-24T00:00:00,Switzerland,SO,Solothurn,47.206649,7.516605,,,,,,,,1.0,,
 2020-03-24T00:00:00,Switzerland,SZ,Schwyz,47.061787,8.756585000000001,,,,,,,,,,

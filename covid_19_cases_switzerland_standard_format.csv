@@ -495,7 +495,7 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-24T00:00:00,Switzerland,ZH,Zürich,47.451541999999996,8.564572,,,,,1211.0,143.0,,5.0,,
 2020-03-25T00:00:00,Switzerland,AG,Aargau,47.449406,8.327494999999999,,,,,,,,2.0,,
 2020-03-25T00:00:00,Switzerland,AI,Appenzell Innerrhoden,47.328414,9.409647,,,,,,,,,,
-2020-03-25T00:00:00,Switzerland,AR,Appenzell Ausserrhoden,47.382709999999996,9.27186,,,,,,,,2.0,,
+2020-03-25T00:00:00,Switzerland,AR,Appenzell Ausserrhoden,47.382709999999996,9.27186,,,,,34.0,1.0,,2.0,,
 2020-03-25T00:00:00,Switzerland,BE,Bern,46.916667,7.466667,,,,,624.0,92.0,,6.0,,
 2020-03-25T00:00:00,Switzerland,BL,Baselland,47.482779,7.742975,,,,,,,,4.0,,
 2020-03-25T00:00:00,Switzerland,BS,Basel-Stadt,47.558395000000004,7.573271000000001,,,,,,,,5.0,,

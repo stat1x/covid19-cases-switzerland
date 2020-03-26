@@ -527,7 +527,7 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-26T00:00:00,Switzerland,BS,Basel-Stadt,47.558395000000004,7.573271000000001,,,,,,,,8.0,,
 2020-03-26T00:00:00,Switzerland,FR,Fribourg,46.718391,7.074008,,,,,,,,1.0,,
 2020-03-26T00:00:00,Switzerland,GE,Genève,46.195602,6.1481129999999995,,,,,,,,15.0,,
-2020-03-26T00:00:00,Switzerland,GL,Glarus,47.04057,9.068036,,,,,,,,,,
+2020-03-26T00:00:00,Switzerland,GL,Glarus,47.04057,9.068036,,,,,43.0,3.0,,,,
 2020-03-26T00:00:00,Switzerland,GR,Graubünden,46.796756,10.305946,,,,,373.0,51.0,,9.0,,
 2020-03-26T00:00:00,Switzerland,JU,Jura,47.350744,7.156107,,,,,,,,,,
 2020-03-26T00:00:00,Switzerland,LU,Luzern,47.083333,8.266667,,,,,253.0,25.0,,1.0,,

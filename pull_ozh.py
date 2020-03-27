@@ -55,6 +55,9 @@ def main():
     df_fatalities.to_csv(
         "covid19_fatalities_switzerland_openzh.csv", index_label="Date"
     )
+    df_hospitalized.to_csv(
+        "covid19_hospitalized_switzerland_openzh.csv", index_label="Date"
+    )
 
 
 if __name__ == "__main__":

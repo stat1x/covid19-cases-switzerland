@@ -32,21 +32,19 @@ def main():
     dates = get_date_range(dfs)
 
     df_cases = pd.DataFrame(float("nan"), index=dates, columns=cantons)
-    for canton, df in dfs.items():
-        print(df)
-        for d in dates:
-            if d in df.index:
-                print(canton, d, df["ncumul_conf"][d])
-                df_cases[canton][d] = df["ncumul_conf"][d]
-
     df_fatalities = pd.DataFrame(float("nan"), index=dates, columns=cantons)
+    df_hospitalized = pd.DataFrame(float("nan"), index=dates, columns=cantons)
+
     for canton, df in dfs.items():
         for d in dates:
             if d in df.index:
+                df_cases[canton][d] = df["ncumul_conf"][d]
                 df_fatalities[canton][d] = df["ncumul_deceased"][d]
+                df_hospitalized[canton][d] = df["ncumul_hosp"][d]
 
     df_cases = df_cases.fillna(method="ffill")
     df_fatalities = df_fatalities.fillna(method="ffill")
+    df_hospitalized = df_hospitalized.fillna(method="ffill")
 
     df_cases["CH"] = df_cases.sum(axis=1)
     df_fatalities["CH"] = df_fatalities.sum(axis=1)

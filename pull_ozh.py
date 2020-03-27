@@ -24,15 +24,19 @@ def main():
 
     dfs = {}
     for canton in cantons:
-        dfs[canton] = pd.read_csv(parser["cantonal"][canton.lower()], index_col=[0])
+        dfs[canton] = (
+            pd.read_csv(parser["cantonal"][canton.lower()]).groupby(["date"]).max()
+        )
 
     # Append empty dates to all
     dates = get_date_range(dfs)
 
     df_cases = pd.DataFrame(float("nan"), index=dates, columns=cantons)
     for canton, df in dfs.items():
+        print(df)
         for d in dates:
             if d in df.index:
+                print(canton, d, df["ncumul_conf"][d])
                 df_cases[canton][d] = df["ncumul_conf"][d]
 
     df_fatalities = pd.DataFrame(float("nan"), index=dates, columns=cantons)

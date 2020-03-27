@@ -570,4 +570,4 @@ date,country,abbreviation_canton,name_canton,lat,long,hospitalized_with_symptoms
 2020-03-27T00:00:00,Switzerland,VD,Vaud,46.5369,6.58478,,,,,,,,21.0,,
 2020-03-27T00:00:00,Switzerland,VS,Valais,46.209567,7.604659,,,,,,,,15.0,,
 2020-03-27T00:00:00,Switzerland,ZG,Zug,47.157296,8.537294000000001,,,,,94.0,7.0,,,,
-2020-03-27T00:00:00,Switzerland,ZH,Zürich,47.451541999999996,8.564572,,,,,,,,9.0,,
+2020-03-27T00:00:00,Switzerland,ZH,Zürich,47.451541999999996,8.564572,,,,,1578.0,102.0,,11.0,,

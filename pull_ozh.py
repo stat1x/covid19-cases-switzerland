@@ -41,8 +41,16 @@ def main():
             if d in df.index:
                 df_fatalities[canton][d] = df["ncumul_deceased"][d]
 
-    print(df_cases)
-    print(df_fatalities.fillna(method="ffill"))
+    df_cases = df_cases.fillna(method="ffill")
+    df_fatalities = df_fatalities.fillna(method="ffill")
+
+    df_cases["CH"] = df_cases.sum(axis=1)
+    df_fatalities["CH"] = df_fatalities.sum(axis=1)
+
+    df_cases.to_csv("covid19_cases_switzerland_openzh.csv", index_label="Date")
+    df_fatalities.to_csv(
+        "covid19_fatalities_switzerland_openzh.csv", index_label="Date"
+    )
 
 
 if __name__ == "__main__":

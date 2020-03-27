@@ -42,12 +42,14 @@ def main():
                 df_fatalities[canton][d] = df["ncumul_deceased"][d]
                 df_hospitalized[canton][d] = df["ncumul_hosp"][d]
 
-    df_cases = df_cases.fillna(method="ffill")
-    df_fatalities = df_fatalities.fillna(method="ffill")
-    df_hospitalized = df_hospitalized.fillna(method="ffill")
+    # Fill to calculate the correct totals for CH
+    df_cases_total = df_cases.fillna(method="ffill")
+    df_fatalities_total = df_fatalities.fillna(method="ffill")
+    df_hospitalized_total = df_hospitalized.fillna(method="ffill")
 
-    df_cases["CH"] = df_cases.sum(axis=1)
-    df_fatalities["CH"] = df_fatalities.sum(axis=1)
+    df_cases["CH"] = df_cases_total.sum(axis=1)
+    df_fatalities["CH"] = df_fatalities_total.sum(axis=1)
+    df_hospitalized["CH"] = df_hospitalized_total.sum(axis=1)
 
     df_cases.to_csv("covid19_cases_switzerland_openzh.csv", index_label="Date")
     df_fatalities.to_csv(

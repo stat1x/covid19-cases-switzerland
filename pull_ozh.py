@@ -83,6 +83,26 @@ def main():
     df_vent.to_csv("covid19_vent_switzerland_openzh.csv", index_label="Date")
     df_released.to_csv("covid19_released_switzerland_openzh.csv", index_label="Date")
 
+    with pd.ExcelWriter("covid_19_data_switzerland.xlsx") as writer:
+        df_cases.to_excel(
+            writer, index_label="Date", sheet_name="Cases",
+        )
+        df_fatalities.to_excel(
+            writer, index_label="Date", sheet_name="Fatalities",
+        )
+        df_hospitalized.to_excel(
+            writer, index_label="Date", sheet_name="Hospitalized",
+        )
+        df_icu.to_excel(
+            writer, index_label="Date", sheet_name="ICU",
+        )
+        df_vent.to_excel(
+            writer, index_label="Date", sheet_name="Ventilated",
+        )
+        df_released.to_excel(
+            writer, index_label="Date", sheet_name="Released",
+        )
+
 
 if __name__ == "__main__":
     main()

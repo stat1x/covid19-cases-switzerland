@@ -23,10 +23,15 @@ def main():
     cantons = list(map(str.upper, parser["cantonal"]))
 
     dfs = {}
+    last_update = {}
     for canton in cantons:
-        dfs[canton] = (
-            pd.read_csv(parser["cantonal"][canton.lower()]).groupby(["date"]).max()
-        )
+        df = pd.read_csv(parser["cantonal"][canton.lower()])
+        d = df.iloc[-1]["date"]
+        t = df.iloc[-1]["time"]
+
+        dfs[canton] = df.groupby(["date"]).max()
+
+        print(d, t)
 
     # Append empty dates to all
     dates = get_date_range(dfs)

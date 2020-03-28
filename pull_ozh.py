@@ -23,19 +23,23 @@ def main():
     cantons = list(map(str.upper, parser["cantonal"]))
 
     dfs = {}
-    last_update = {}
+    last_updated = {}
     for canton in cantons:
         df = pd.read_csv(parser["cantonal"][canton.lower()])
         d = df.iloc[-1]["date"]
         t = df.iloc[-1]["time"]
 
+        if type(t) == float or type(t) == pd.np.float64:
+            t = "00:00"
+
+        last_updated[canton] = {"Date": d, "Time": t}
         dfs[canton] = df.groupby(["date"]).max()
 
-        print(d, t)
+    df_last_updated = pd.DataFrame(last_updated).T
+    df_last_updated.to_csv("last_updated.csv", index_label="Canton")
 
     # Append empty dates to all
     dates = get_date_range(dfs)
-
     df_cases = pd.DataFrame(float("nan"), index=dates, columns=cantons)
     df_fatalities = pd.DataFrame(float("nan"), index=dates, columns=cantons)
     df_hospitalized = pd.DataFrame(float("nan"), index=dates, columns=cantons)

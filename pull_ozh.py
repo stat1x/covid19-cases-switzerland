@@ -72,6 +72,7 @@ def main():
     df_vent["CH"] = df_vent_total.sum(axis=1)
     df_released["CH"] = df_released_total.sum(axis=1)
 
+    # Store as CSV
     df_cases.to_csv("covid19_cases_switzerland_openzh.csv", index_label="Date")
     df_fatalities.to_csv(
         "covid19_fatalities_switzerland_openzh.csv", index_label="Date"
@@ -82,6 +83,18 @@ def main():
     df_icu.to_csv("covid19_icu_switzerland_openzh.csv", index_label="Date")
     df_vent.to_csv("covid19_vent_switzerland_openzh.csv", index_label="Date")
     df_released.to_csv("covid19_released_switzerland_openzh.csv", index_label="Date")
+
+    # Store as json
+    df_cases.to_json("covid19_cases_switzerland_openzh.json", index_label="Date")
+    df_fatalities.to_json(
+        "covid19_fatalities_switzerland_openzh.json", index_label="Date"
+    )
+    df_hospitalized.to_json(
+        "covid19_hospitalized_switzerland_openzh.json", index_label="Date"
+    )
+    df_icu.to_json("covid19_icu_switzerland_openzh.json", index_label="Date")
+    df_vent.to_json("covid19_vent_switzerland_openzh.json", index_label="Date")
+    df_released.to_json("covid19_released_switzerland_openzh.json", index_label="Date")
 
     with pd.ExcelWriter("covid_19_data_switzerland.xlsx") as writer:
         df_cases.to_excel(

@@ -85,16 +85,12 @@ def main():
     df_released.to_csv("covid19_released_switzerland_openzh.csv", index_label="Date")
 
     # Store as json
-    df_cases.to_json("covid19_cases_switzerland_openzh.json", index_label="Date")
-    df_fatalities.to_json(
-        "covid19_fatalities_switzerland_openzh.json", index_label="Date"
-    )
-    df_hospitalized.to_json(
-        "covid19_hospitalized_switzerland_openzh.json", index_label="Date"
-    )
-    df_icu.to_json("covid19_icu_switzerland_openzh.json", index_label="Date")
-    df_vent.to_json("covid19_vent_switzerland_openzh.json", index_label="Date")
-    df_released.to_json("covid19_released_switzerland_openzh.json", index_label="Date")
+    df_cases.to_json("covid19_cases_switzerland_openzh.json")
+    df_fatalities.to_json("covid19_fatalities_switzerland_openzh.json")
+    df_hospitalized.to_json("covid19_hospitalized_switzerland_openzh.json")
+    df_icu.to_json("covid19_icu_switzerland_openzh.json")
+    df_vent.to_json("covid19_vent_switzerland_openzh.json")
+    df_released.to_json("covid19_released_switzerland_openzh.json")
 
     with pd.ExcelWriter("covid_19_data_switzerland.xlsx") as writer:
         df_cases.to_excel(

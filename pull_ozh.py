@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 from datetime import date, timedelta
 from configparser import ConfigParser
@@ -71,6 +72,36 @@ def main():
     df_icu["CH"] = df_icu_total.sum(axis=1)
     df_vent["CH"] = df_vent_total.sum(axis=1)
     df_released["CH"] = df_released_total.sum(axis=1)
+
+    # Create a summery with the most important values in json to allow web devs to grab it
+    summary = {
+        "totals": {
+            "cases": df_cases["CH"][-1],
+            "fatalities": df_fatalities["CH"][-1],
+            "hospitalized": df_hospitalized["CH"][-1],
+            "icu": df_icu["CH"][-1],
+            "vent": df_vent["CH"][-1],
+            "released": df_released["CH"][-1],
+        },
+        "changes": {
+            "cases": df_cases["CH"][-1] - df_cases["CH"][-2],
+            "fatalities": df_fatalities["CH"][-1] - df_fatalities["CH"][-2],
+            "hospitalized": df_hospitalized["CH"][-1] - df_hospitalized["CH"][-2],
+            "icu": df_icu["CH"][-1] - df_icu["CH"][-2],
+            "vent": df_vent["CH"][-1] - df_vent["CH"][-2],
+            "released": df_released["CH"][-1] - df_released["CH"][-2],
+        },
+        "updated_cantons": ",".join(
+            [
+                canton
+                for canton in df_cases
+                if canton != "CH" and not pd.np.isnan(float(df_cases[canton][-1]))
+            ]
+        ),
+    }
+
+    with open("summary.json", "w") as f:
+        json.dump(summary, f)
 
     # Store as CSV
     df_cases.to_csv("covid19_cases_switzerland_openzh.csv", index_label="Date")
